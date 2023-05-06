@@ -6,3 +6,6 @@
 
 ## Layui官方
 [官方Gitee库](https://gitee.com/layui/layui)
+
+## 版权声明
+此代码版权归Layui官方所有
