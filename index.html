@@ -10,7 +10,7 @@
             padding: 100px;
         }
 
-        button{
+        button {
             position: relative;
         }
 
@@ -102,8 +102,8 @@
                         content: $('#test11111'),
                         maxmin: true,
                         shade: false,
-                        minStack: false, //最小化不堆叠在左下角
-                        id: 'page1', //定义 ID，防止重复弹出
+                        minStack: false, // 最小化不堆叠在左下角
+                        id: 'page-1', // 定义 ID，防止重复弹出
                         min: function (layero, index) {
                             layer.msg('阻止了默认的最小化');
                             layer.style(index, {top: 'auto', bottom: 0});
@@ -113,10 +113,12 @@
                 }
                 , test6: function () {
                     layer.open({
-                        type: 2
-                        , content: 'https://www.aliyun.com/activity?userCode=ap0255is'
-                        , area: ['375px', '500px']
-                        , maxmin: true
+                        type: 2,
+                        content: 'https://www.aliyun.com/activity?userCode=ap0255is',
+                        area: ['375px', '500px'],
+                        id: 'iframe-1',
+                        hideOnClose: true, // 关闭时是否隐藏弹层容器，下次打开时直接显示原来的弹层
+                        maxmin: true
                     });
                 }
                 , testLoading: function () {
@@ -129,7 +131,7 @@
                         layer.close(index);
                         layer.prompt({title: '随便写点啥，并确认', formType: 2}, function (text, index) {
                             layer.close(index);
-                            layer.msg('演示完毕！您的口令：' + util.escape(pass) + '<br>您最后写下了：' + util.escape(text));
+                            layer.msg('演示完毕！您的口令：' + pass + '<br>您最后写下了：' + text);
                         });
                     });
                 }

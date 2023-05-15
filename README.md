@@ -9,3 +9,6 @@
 
 ## 版权声明
 此代码版权归Layui官方所有
+
+## 推荐项目
+[盘企CMS-SaaS建站系统](https://gitee.com/luckymoke/LCMS.OPEN)
