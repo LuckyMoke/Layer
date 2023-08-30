@@ -4,14 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>layer演示</title>
+    <title>layer 弹层 - layui</title>
     <style>
         body {
             padding: 100px;
-        }
-
-        button {
-            position: relative;
         }
 
         #photos li {
@@ -45,7 +41,7 @@
     <hr><br>
     <div class="layui-list">
         <ul class="layui-row" id="photos">
-            <li class="list"><img src="https://unpkg.com/outeres/demo/1.jpg" alt="123"></li>
+            <li class="list"><img src="https://unpkg.com/outeres/demo/1.jpg" alt="图片ALT信息"></li>
             <li class="list"><img src="https://unpkg.com/outeres/demo/2.jpg"></li>
         </ul>
     </div>
@@ -182,7 +178,9 @@
             clickFunc[clickon](this);
         });
         layer.photos({
-            photos: '#photos'
+            photos: '#photos', // $('#photos')
+            // toolbar: false,
+            // footer: false
         });
         $('#photos').append('<li class="list"><img src="https://unpkg.com/outeres/demo/3.jpg"></li>');
     </script>
